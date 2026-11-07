@@ -1,0 +1,14 @@
+{
+  "mode": "auto",
+  "pages": [
+    "cpu",
+    "gpu"
+  ],
+  "dwell_sec": 10,
+  "update_ms": 1000,
+  "fahrenheit": false,
+  "gpu_pci": "auto",
+  "enabled": true,
+  "psu_overhead_w": 30,
+  "psu_capacity_w": 0
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=CH170 Display
+Comment=Choose what the case panel shows
+Exec=@ROOT@/bin/ch170-display
+Path=@ROOT@
+Terminal=false
+Categories=Settings;HardwareSettings;
+Icon=preferences-system
+StartupNotify=true

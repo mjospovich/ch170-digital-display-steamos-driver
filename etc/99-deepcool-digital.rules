@@ -1,0 +1,7 @@
+# CH170 DIGITAL is USB HID 3633:0013. The kernel binds usbhid; this only
+# opens the hidraw node for the logged-in user and for the display service.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3633", MODE="0666"
+
+# intel_rapl exposes package energy as root:root 0400. The daemon reads it for CPU watts.
+ACTION=="add", SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="/usr/bin/chmod 444 /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj"
+ACTION=="add", SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0:0", RUN+="/usr/bin/chmod 444 /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj"
